@@ -1,0 +1,11 @@
+/.bazelrc.user
+/.tf_configure.bazelrc
+/bazel-*
+/bazel_pip
+/_python_build
+*.swp
+.vscode/
+.idea/**
+/build/
+[Bb]uild/
+*.whl
