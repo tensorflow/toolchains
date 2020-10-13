@@ -8,6 +8,6 @@ package(
 
 exports_files(
     [
-        "tensorflow.bzl",
+        "tf_macros.bzl",
     ],
 )
