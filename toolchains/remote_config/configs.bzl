@@ -1,6 +1,6 @@
 """Configurations of RBE builds used with remote config."""
 
-load("//third_party/toolchains/remote_config:rbe_config.bzl", "tensorflow_local_config", "tensorflow_rbe_config", "tensorflow_rbe_win_config")
+load("//toolchains/remote_config:rbe_config.bzl", "tensorflow_local_config", "tensorflow_rbe_config", "tensorflow_rbe_win_config")
 
 def initialize_rbe_configs():
     tensorflow_local_config(

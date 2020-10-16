@@ -1,6 +1,6 @@
 """Docker images used with remote config and RBE."""
 
-load("//third_party/toolchains/preconfig/generate:containers.bzl", "container_digests")
+load("//toolchains/preconfig/generate:containers.bzl", "container_digests")
 
 containers = {
     # Built with //tensorflow/tools/ci_build/Dockerfile.rbe.ubuntu16.04-manylinux2010.

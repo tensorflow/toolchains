@@ -1,7 +1,7 @@
 """Repository rule for remote GPU autoconfiguration.
 
 This rule creates the starlark file
-//third_party/toolchains/remote:execution.bzl
+//toolchains/remote:execution.bzl
 providing the function `gpu_test_tags`.
 
 `gpu_test_tags` will return:
@@ -27,14 +27,14 @@ def _remote_execution_configure(repository_ctx):
         gpu_test_tags = "\"remote-gpu\""
     repository_ctx.template(
         "remote_execution.bzl",
-        Label("//third_party/toolchains/remote:execution.bzl.tpl"),
+        Label("//toolchains/remote:execution.bzl.tpl"),
         {
             "%{gpu_test_tags}": gpu_test_tags,
         },
     )
     repository_ctx.template(
         "BUILD",
-        Label("//third_party/toolchains/remote:BUILD.tpl"),
+        Label("//toolchains/remote:BUILD.tpl"),
     )
 
 remote_execution_configure = repository_rule(
