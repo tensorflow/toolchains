@@ -4,6 +4,7 @@ load(
 )
 
 def _tensorflow_rbe_config(name, compiler, python_version, os, rocm_version = None, cuda_version = None, cudnn_version = None, tensorrt_version = None, tensorrt_install_path = None, cudnn_install_path = None, compiler_prefix = None, build_bazel_src = False, sysroot = None):
+    print (os)
     base = "@%s//image" % os
     config_repos = [
         "local_config_python",
@@ -68,7 +69,7 @@ def _tensorflow_rbe_config(name, compiler, python_version, os, rocm_version = No
             "TF_NEED_ROCM": "1",
             "TF_ENABLE_XLA": "0",
         })
-
+    fail
     docker_toolchain_autoconfig(
         name = name,
         base = base,

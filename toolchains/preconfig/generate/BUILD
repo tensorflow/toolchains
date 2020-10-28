@@ -1,7 +1,7 @@
 licenses(["restricted"])
 
 load(":generate.bzl", "tensorflow_rbe_config")
-
+load("//toolchains/remote_config:containers.bzl", "containers")
 tensorflow_rbe_config(
     name = "ubuntu16.04-py3-clang",
     compiler = "clang",
