@@ -26,7 +26,7 @@ fi
 
 TEMPDIR="$(mktemp -d)"
 ROOT="${PWD}"
-PKG="third_party/toolchains/preconfig"
+PKG="toolchains/preconfig"
 IFS='-' read -ra PLATFORM <<< "${TARGET}"
 OS="${PLATFORM[0]}"
 PY_VERSION="${PLATFORM[1]}"
@@ -57,9 +57,10 @@ echo "Compiler: ${COMPILER}"
 echo "CUDA/ROCm: ${GPU_VERSION}"
 echo "CUDNN: ${CUDNN_VERSION}"
 echo "TensorRT: ${TENSORRT_VERSION}"
-
-bazel build --host_force_python=PY2 --define=mount_project="${PWD}" \
+set -x
+bazel build --experimental_repo_remote_exec --host_force_python=PY2 --define=mount_project="${PWD}" \
   "${PKG}/generate:${TARGET}"
+exit 1
 cd "${TEMPDIR}"
 tar xvf "${ROOT}/bazel-bin/${PKG}/generate/${TARGET}_outputs.tar"
 
