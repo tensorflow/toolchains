@@ -123,7 +123,7 @@ def initialize_rbe_configs():
         cuda_version = "11.2",
         cudnn_version = "8.1",
         os = "ubuntu18.04-manylinux2010-multipython",
-        python_versions = ["3.5", "3.6", "3.7", "3.8"],
+        python_versions = ["3.6", "3.7", "3.8", "3.9"],
         tensorrt_install_path = "/usr",
         tensorrt_version = "7.2",
         python_install_path = "/usr/local",
@@ -133,4 +133,3 @@ def initialize_rbe_configs():
         name = "windows_py37",
         python_bin_path = "C:/Python37/python.exe",
     )
-
