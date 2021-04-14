@@ -8,10 +8,21 @@ load("@bazel_tools//tools/jdk:default_java_toolchain.bzl", "default_java_toolcha
 
 licenses(["notice"])
 
+# Java toolchain that works with JDK8 and Bazel 3.7.2, 4.0.0.
 default_java_toolchain(
     name = "tf_java_toolchain",
     jvm_opts = JDK8_JVM_OPTS,
     tools = ["@bazel_tools//tools/jdk:javac_jar"],
+    misc = [
+        "-XDskipDuplicateBridges=true",
+        "-g",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+# Java toolchain that works with newer JDKs (>8) or Bazel > 4.0.0.
+default_java_toolchain(
+    name = "tf_java_toolchain_jdk11",
     misc = [
         "-XDskipDuplicateBridges=true",
         "-g",
