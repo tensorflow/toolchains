@@ -4,12 +4,25 @@
 # 0.29.1), a warning message will be thrown if "-parameters" is passed. If "-Werror" also exists,
 # the compiling action will fail. To workaround this, we override the misc value of
 # the default java toolchain to remove "-parameters" flag.
-load("@bazel_tools//tools/jdk:default_java_toolchain.bzl", "default_java_toolchain")
+load("@bazel_tools//tools/jdk:default_java_toolchain.bzl", "default_java_toolchain", "JDK8_JVM_OPTS")
 
 licenses(["notice"])
 
+# Java toolchain that works with JDK8 and Bazel 3.7.2, 4.0.0.
 default_java_toolchain(
     name = "tf_java_toolchain",
+    jvm_opts = JDK8_JVM_OPTS,
+    tools = ["@bazel_tools//tools/jdk:javac_jar"],
+    misc = [
+        "-XDskipDuplicateBridges=true",
+        "-g",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+# Java toolchain that works with newer JDKs (>8) or Bazel > 4.0.0.
+default_java_toolchain(
+    name = "tf_java_toolchain_jdk11",
     misc = [
         "-XDskipDuplicateBridges=true",
         "-g",
