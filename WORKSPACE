@@ -24,7 +24,7 @@ load("@io_bazel_rules_closure//closure:defs.bzl", "closure_repositories")
 
 closure_repositories()
 
-load("//toolchains/preconfig/generate:archives.bzl",
+load("//toolchains:archives.bzl",
      "bazel_toolchains_archive")
 
 bazel_toolchains_archive()
