@@ -62,7 +62,7 @@ containers = {
         "registry": "gcr.io",
         "repository": "tensorflow-testing/nosla-cuda10.2-cudnn7-ubuntu18.04-manylinux2010-multipython",
         "digest": container_digests["cuda10.2-cudnn7-ubuntu18.04-manylinux2010-multipython"],
-    }
+    },
 
     # Built with //tensorflow/tools/ci_build/Dockerfile.rbe.cuda11.0-cudnn8-ubuntu18.04-manylinux2010-multipython.
     "cuda11.0-cudnn8-ubuntu18.04-manylinux2010-multipython": {
