@@ -2,6 +2,7 @@
 
 """SHA 256 values for each image."""
 container_digests = {
+    # Unused?
     "ubuntu16.04": "sha256:b90dcf2f35f3354909f4491bdf019c110b4b4d95ef0395ebf178bc5d523a4208",
     "centos6": "sha256:d09c12fb26fbbe8398b4973260c75172eb67d509dae9d6f4ad54279b7d6b0494",
     "ubuntu16.04-manylinux2010": "sha256:5b6a55a33046843a3c3b3b3d13b028cc6e61d8af5275998e95fa539cafe72c51",
@@ -15,11 +16,13 @@ container_digests = {
     "cuda10.1-cudnn7-ubuntu18.04-manylinux2010-multipython": "sha256:71e946b59a63e80d10178f9e2869af3b31583737b779edc27688c99f4998dd05",
     "cuda10.2-cudnn7-ubuntu18.04-manylinux2010-multipython": "sha256:9bb24f6f98e71b424dd885ec9fe39770831376840fa2231057807c89f814c803",
     "cuda11.0-cudnn8-ubuntu18.04-manylinux2010-multipython": "sha256:3e5c991f67e2cca610cb9f6b39927e3757ba1e7f2424d18cef8b871bfa4d75b3",
-    "cuda11.1-cudnn8-ubuntu18.04-manylinux2010-multipython": "sha256:f89fe372481d7f3e204197e85f7edf5660311e3ce9f4a66ffc57c6ca634a1c9c",
-    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2010-multipython": "sha256:f5795370901969c1dbbf915930b0016610f93e9822c61b33a4d3ff3a222a620d",
-    "cuda11.4-cudnn8.0.5-ubuntu18.04-manylinux2010-multipython": "sha256:f1ca3b6b2095a467bec21246096809794957bac9b4ffe5b5d604eb1ff6ad56a6",
-    "cuda11.4-cudnn8.2-ubuntu18.04-manylinux2010-multipython": "sha256:1f22a865cbc9e08b8d03225c2c9e88c697c0053b88f8fe2b03abdb581524e6bd",
-    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2014-multipython": "sha256:bcd6269ef4cd5574d2c3546b7fb86503c766a902489c2c554b48ba279a5d73cd",
+    # TF and JAX RBE containers section
+    "cuda11.1-cudnn8-ubuntu18.04-manylinux2010-multipython": "sha256:9d1b17129a200dff83a3d1b08b4999e972436152d7fc9f7aa6ea336caa94b79e",
+    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2010-multipython": "sha256:2582793a44bdb3cad278ccf83758f99bedce74018b45091b05c98f91877f0ec8",
+    "cuda11.4-cudnn8.0.5-ubuntu18.04-manylinux2010-multipython": "sha256:98a66eea6a0f70d59e67812d6067fbaf44636711e92bf1b91953b74349965d5b",
+    "cuda11.4-cudnn8.2-ubuntu18.04-manylinux2010-multipython": "sha256:4f9f3e4444a3b50a9ae7c140f42e0f6dde22ec6cfe9dc80ee3a58ecadcab5dc1",
+    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2014-multipython": "sha256:21e993e24691f84c7ee918e932382447a0de8a470359626bb6e1b331904fa97f",
+    # Others
     "rocm-ubuntu18.04-manylinux2010-multipython": "sha256:0cc50129979d8e96f8e218e3d73506b044c88898ade095f1ed5adbc24ca363af",
     "windows-1803": "sha256:f109576c7c0c8a1783ff22b666e8923b52dbbe7933f69a1c7a7275202c304a12",
 }
