@@ -141,7 +141,7 @@ def initialize_rbe_configs():
         tensorrt_version = "7.2",
         python_install_path = "/usr/local",
     )
-    
+
     tensorflow_rbe_config(
         name = "ubuntu18.04-clang_manylinux2010-cuda11.2-cudnn8.1-tensorrt7.2",
         compiler = "/clang_r7f6f9f4cf966c78a315d15d6e913c43cfa45c47c/bin/clang",
