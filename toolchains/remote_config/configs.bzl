@@ -128,7 +128,7 @@ def initialize_rbe_configs():
         sysroot = "/dt7",
         python_install_path = "/usr/local",
     )
-    
+
     tensorflow_rbe_config(
         name = "ubuntu18.04-gcc7_manylinux2010-cuda11.1-cudnn8-tensorrt7.2",
         compiler = "/dt7/usr/bin/gcc",
@@ -154,7 +154,7 @@ def initialize_rbe_configs():
         sysroot = "/dt7",
         python_install_path = "/usr/local",
     )
-    
+
     tensorflow_rbe_config(
         name = "ubuntu18.04-gcc7_manylinux2010-cuda11.2-cudnn8.1-tensorrt7.2",
         compiler = "/dt7/usr/bin/gcc",
@@ -180,7 +180,7 @@ def initialize_rbe_configs():
         sysroot = "/dt7",
         python_install_path = "/usr/local",
     )
-    
+
     tensorflow_rbe_config(
         name = "ubuntu18.04-gcc7_manylinux2010-cuda11.4-cudnn8.0.5-tensorrt7.2",
         compiler = "/dt7/usr/bin/gcc",
@@ -193,7 +193,7 @@ def initialize_rbe_configs():
         tensorrt_version = "7.2",
         python_install_path = "/usr/local",
     )
-    
+
     tensorflow_rbe_config(
         name = "ubuntu18.04-clang_manylinux2010-cuda11.4-cudnn8.2-tensorrt7.2",
         compiler = "/clang_r7f6f9f4cf966c78a315d15d6e913c43cfa45c47c/bin/clang",
@@ -206,7 +206,7 @@ def initialize_rbe_configs():
         sysroot = "/dt7",
         python_install_path = "/usr/local",
     )
-    
+
     tensorflow_rbe_config(
         name = "ubuntu18.04-gcc7_manylinux2010-cuda11.4-cudnn8.2-tensorrt7.2",
         compiler = "/dt7/usr/bin/gcc",
@@ -226,13 +226,13 @@ def initialize_rbe_configs():
         cuda_version = "11.2",
         cudnn_version = "8.1",
         os = "ubuntu18.04-manylinux2014-multipython",
-        python_versions = ["3.7", "3.8", "3.9"],
+        python_versions = ["3.7", "3.8", "3.9", "3.10"],
         tensorrt_install_path = "/usr",
         tensorrt_version = "7.2",
         sysroot = "/dt8",
         python_install_path = "/usr/local",
     )
-    
+
     tensorflow_rbe_config(
         name = "ubuntu18.04-gcc8_manylinux2014-cuda11.2-cudnn8.1-tensorrt7.2",
         compiler = "/dt8/usr/bin/gcc",
@@ -240,7 +240,7 @@ def initialize_rbe_configs():
         cuda_version = "11.2",
         cudnn_version = "8.1",
         os = "ubuntu18.04-manylinux2014-multipython",
-        python_versions = ["3.7", "3.8", "3.9"],
+        python_versions = ["3.7", "3.8", "3.9", "3.10"],
         tensorrt_install_path = "/usr",
         tensorrt_version = "7.2",
         python_install_path = "/usr/local",
