@@ -17,11 +17,11 @@ container_digests = {
     "cuda10.2-cudnn7-ubuntu18.04-manylinux2010-multipython": "sha256:9bb24f6f98e71b424dd885ec9fe39770831376840fa2231057807c89f814c803",
     "cuda11.0-cudnn8-ubuntu18.04-manylinux2010-multipython": "sha256:3e5c991f67e2cca610cb9f6b39927e3757ba1e7f2424d18cef8b871bfa4d75b3",
     # TF and JAX RBE containers section
-    "cuda11.1-cudnn8-ubuntu18.04-manylinux2010-multipython": "sha256:9d1b17129a200dff83a3d1b08b4999e972436152d7fc9f7aa6ea336caa94b79e",
-    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2010-multipython": "sha256:2582793a44bdb3cad278ccf83758f99bedce74018b45091b05c98f91877f0ec8",
-    "cuda11.4-cudnn8.0.5-ubuntu18.04-manylinux2010-multipython": "sha256:98a66eea6a0f70d59e67812d6067fbaf44636711e92bf1b91953b74349965d5b",
-    "cuda11.4-cudnn8.2-ubuntu18.04-manylinux2010-multipython": "sha256:4f9f3e4444a3b50a9ae7c140f42e0f6dde22ec6cfe9dc80ee3a58ecadcab5dc1",
-    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2014-multipython": "sha256:21e993e24691f84c7ee918e932382447a0de8a470359626bb6e1b331904fa97f",
+    "cuda11.1-cudnn8-ubuntu18.04-manylinux2010-multipython": "sha256:f153edd88ed4f34c8b15e14ec5d5b413122fc52de29d774e15d42f3838a839de",
+    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2010-multipython": "sha256:88ae64c812fe813182ba1db3bba2b215858358d5cf63712c29d7abe13f37080a",
+    "cuda11.4-cudnn8.0.5-ubuntu18.04-manylinux2010-multipython": "sha256:14568e23744cd875d1e399eca8323236808914a0aca7f531efedfc4eddc5cfd0",
+    "cuda11.4-cudnn8.2-ubuntu18.04-manylinux2010-multipython": "sha256:84b4d9419b4ea6e343264028165cc8a2c560d93202dd9ee9f46dabc397947cc6",
+    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2014-multipython": "sha256:2da60dcd808ac46e70dad4ef3e55a6c50587885addaa91dc14209bad7a15caa2",
     # Others
     "rocm-ubuntu18.04-manylinux2010-multipython": "sha256:0cc50129979d8e96f8e218e3d73506b044c88898ade095f1ed5adbc24ca363af",
     "windows-1803": "sha256:f109576c7c0c8a1783ff22b666e8923b52dbbe7933f69a1c7a7275202c304a12",
@@ -76,7 +76,7 @@ containers = {
         "repository": "tensorflow-testing/nosla-cuda11.0-cudnn8-ubuntu18.04-manylinux2010-multipython",
         "digest": container_digests["cuda11.0-cudnn8-ubuntu18.04-manylinux2010-multipython"],
     },
-    
+
     # Built with //tensorflow/tools/ci_build/Dockerfile.rbe.cuda11.1-cudnn8-ubuntu18.04-manylinux2010-multipython.
     "cuda11.1-cudnn8-ubuntu18.04-manylinux2010-multipython": {
         "registry": "gcr.io",
@@ -90,7 +90,7 @@ containers = {
         "repository": "tensorflow-testing/nosla-cuda11.2-cudnn8.1-ubuntu18.04-manylinux2010-multipython",
         "digest": container_digests["cuda11.2-cudnn8.1-ubuntu18.04-manylinux2010-multipython"],
     },
-    
+
     # Built with //tensorflow/tools/ci_build/Dockerfile.rbe.cuda11.4-cudnn8.0.5-ubuntu18.04-manylinux2010-multipython.
     "cuda11.4-cudnn8.0.5-ubuntu18.04-manylinux2010-multipython": {
         "registry": "gcr.io",
@@ -119,7 +119,7 @@ containers = {
         "digest": container_digests["rocm-ubuntu18.04-manylinux2010-multipython"],
     },
 
-    # Built by gunan@ from a private Dockerfile.
+    # Built by mihaimaruseac@ from a private Dockerfile.
     "windows-1803": {
         "registry": "gcr.io",
         "repository": "tensorflow-testing/tf-win-rbe",
