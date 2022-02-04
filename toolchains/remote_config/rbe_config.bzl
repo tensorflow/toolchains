@@ -199,9 +199,8 @@ def sigbuild_tf_config(name, container, env):
     )
 
     remote_python_configure(
-        name = "%s_config_python" % (name, version),
+        name = "%s_config_python" % name,
         environ = env,
         exec_properties = exec_properties,
         platform_constraint = "@%s_config_platform//:platform_constraint" % name,
     )
-

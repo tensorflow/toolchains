@@ -1,6 +1,6 @@
 """Configurations of RBE builds used with remote config."""
 
-load("//toolchains/remote_config:rbe_config.bzl", "tensorflow_local_config", "tensorflow_rbe_config", "tensorflow_rbe_win_config")
+load("//toolchains/remote_config:rbe_config.bzl", "tensorflow_local_config", "tensorflow_rbe_config", "tensorflow_rbe_win_config", "sigbuild_tf_config")
 
 def initialize_rbe_configs():
     tensorflow_local_config(
@@ -246,6 +246,11 @@ def initialize_rbe_configs():
         python_install_path = "/usr/local",
     )
 
+    tensorflow_rbe_win_config(
+        name = "windows_py37",
+        python_bin_path = "C:/Python37/python.exe",
+    )
+
     # Experimental SIG Build RBE Config
     # Since the TF team only uses one version of Python in its RBE CI, only one
     # version is specified here. The crosstool generated from this config is
@@ -269,7 +274,7 @@ def initialize_rbe_configs():
             "GCC_HOST_COMPILER_PREFIX": "/usr/bin",
             "HOST_CXX_COMPILER": "/dt7/usr/bin/gcc",
             "HOST_C_COMPILER": "/dt7/usr/bin/gcc",
-            "PYTHON_BIN_PATH": "/usr/bin/python3"
+            "PYTHON_BIN_PATH": "/usr/bin/python3",
             "TENSORRT_INSTALL_PATH": "/usr/lib/x86_64-linux-gnu",
             "TF_CUDA_CLANG": "0",
             "TF_CUDA_COMPUTE_CAPABILITIES": "3.5,6.0",
@@ -283,7 +288,3 @@ def initialize_rbe_configs():
         },
     )
 
-    tensorflow_rbe_win_config(
-        name = "windows_py37",
-        python_bin_path = "C:/Python37/python.exe",
-    )
