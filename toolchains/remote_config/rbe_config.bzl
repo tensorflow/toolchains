@@ -168,39 +168,40 @@ tensorflow_local_config = _tensorflow_local_config
 # See https://github.com/tensorflow/build/tree/master/tf_sig_build_dockerfiles
 # These containers do not support ROCm and all have CUDA, so configuration is
 # very straightforward.
-def sigbuild_tf_config(name, container, env):
-    exec_properties = {
-        "container-image": container,
-        "Pool": "default",
-    }
+def sigbuild_tf_configs(name_container_map, env):
+    for name, container in name_container_map:
+        exec_properties = {
+            "container-image": container,
+            "Pool": "default",
+        }
 
-    remote_cuda_configure(
-        name = "%s_config_cuda" % name,
-        environ = env,
-        exec_properties = exec_properties,
-    )
+        remote_cuda_configure(
+            name = "%s_config_cuda" % name,
+            environ = env,
+            exec_properties = exec_properties,
+        )
 
-    remote_nccl_configure(
-        name = "%s_config_nccl" % name,
-        environ = env,
-        exec_properties = exec_properties,
-    )
+        remote_nccl_configure(
+            name = "%s_config_nccl" % name,
+            environ = env,
+            exec_properties = exec_properties,
+        )
 
-    remote_tensorrt_configure(
-        name = "%s_config_tensorrt" % name,
-        environ = env,
-        exec_properties = exec_properties,
-    )
+        remote_tensorrt_configure(
+            name = "%s_config_tensorrt" % name,
+            environ = env,
+            exec_properties = exec_properties,
+        )
 
-    remote_platform_configure(
-        name = "%s_config_platform" % name,
-        platform = "linux",
-        platform_exec_properties = exec_properties,
-    )
+        remote_platform_configure(
+            name = "%s_config_platform" % name,
+            platform = "linux",
+            platform_exec_properties = exec_properties,
+        )
 
-    remote_python_configure(
-        name = "%s_config_python" % name,
-        environ = env,
-        exec_properties = exec_properties,
-        platform_constraint = "@%s_config_platform//:platform_constraint" % name,
-    )
+        remote_python_configure(
+            name = "%s_config_python" % name,
+            environ = env,
+            exec_properties = exec_properties,
+            platform_constraint = "@%s_config_platform//:platform_constraint" % name,
+        )
