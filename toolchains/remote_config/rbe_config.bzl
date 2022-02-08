@@ -169,7 +169,7 @@ tensorflow_local_config = _tensorflow_local_config
 # These containers do not support ROCm and all have CUDA, so configuration is
 # very straightforward.
 def sigbuild_tf_configs(name_container_map, env):
-    for name, container in name_container_map:
+    for name, container in name_container_map.items():
         exec_properties = {
             "container-image": container,
             "Pool": "default",
