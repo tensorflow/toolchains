@@ -1,6 +1,6 @@
 """Configurations of RBE builds used with remote config."""
 
-load("//toolchains/remote_config:rbe_config.bzl", "tensorflow_local_config", "tensorflow_rbe_config", "tensorflow_rbe_win_config", "sigbuild_tf_config")
+load("//toolchains/remote_config:rbe_config.bzl", "tensorflow_local_config", "tensorflow_rbe_config", "tensorflow_rbe_win_config", "sigbuild_tf_configs")
 
 def initialize_rbe_configs():
     tensorflow_local_config(
@@ -255,7 +255,7 @@ def initialize_rbe_configs():
     # config is python-version-independent because it only cares about the
     # tooling paths; the container mapping is useful only so that TF RBE users
     # may specify a specific Python version container.
-    sigbuild_tf_config(
+    sigbuild_tf_configs(
         name_container_map = {
             "sigbuild-r2.9": "docker://gcr.io/tensorflow-sigs/build@sha256:493fb6f7dd563293759d1f033d9d3c669fd02dfb287b6bf21d9852bab9380e68",
             "sigbuild-r2.9-python3.7": "docker://gcr.io/tensorflow-sigs/build@sha256:295f2598d6e1edbb436606c6005ff758ad52346d223ceccfcea1a3103bef2cd5",
@@ -297,7 +297,7 @@ def initialize_rbe_configs():
 
     # Double-experimental config for manylinux2014 PR:
     # https://github.com/tensorflow/build/pull/57
-    sigbuild_tf_config(
+    sigbuild_tf_configs(
         name_container_map = {
             "sigbuild-57": "docker://gcr.io/tensorflow-sigs/build@sha256:0a2e12ca7ab8536a31f1854f72510986a6792413c9d5815535486571664402d8",
             "sigbuild-57-python3.9": "docker://gcr.io/tensorflow-sigs/build@sha256:0a2e12ca7ab8536a31f1854f72510986a6792413c9d5815535486571664402d8",
