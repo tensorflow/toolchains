@@ -17,11 +17,11 @@ container_digests = {
     "cuda10.2-cudnn7-ubuntu18.04-manylinux2010-multipython": "sha256:9bb24f6f98e71b424dd885ec9fe39770831376840fa2231057807c89f814c803",
     "cuda11.0-cudnn8-ubuntu18.04-manylinux2010-multipython": "sha256:3e5c991f67e2cca610cb9f6b39927e3757ba1e7f2424d18cef8b871bfa4d75b3",
     # TF and JAX RBE containers section
-    "cuda11.1-cudnn8-ubuntu18.04-manylinux2010-multipython": "sha256:f153edd88ed4f34c8b15e14ec5d5b413122fc52de29d774e15d42f3838a839de",
-    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2010-multipython": "sha256:88ae64c812fe813182ba1db3bba2b215858358d5cf63712c29d7abe13f37080a",
-    "cuda11.4-cudnn8.0.5-ubuntu18.04-manylinux2010-multipython": "sha256:14568e23744cd875d1e399eca8323236808914a0aca7f531efedfc4eddc5cfd0",
-    "cuda11.4-cudnn8.2-ubuntu18.04-manylinux2010-multipython": "sha256:84b4d9419b4ea6e343264028165cc8a2c560d93202dd9ee9f46dabc397947cc6",
-    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2014-multipython": "sha256:2da60dcd808ac46e70dad4ef3e55a6c50587885addaa91dc14209bad7a15caa2",
+    "cuda11.1-cudnn8-ubuntu18.04-manylinux2010-multipython": "sha256:bf24e58c0e18d60a99bee81c65d9f50b19548dec352404f0593ba5ea18c7e85c",
+    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2010-multipython": "sha256:904ea6196b81fe67bf5a3c00d336b7c6f990d49291abd2c1dec0654ee7ac3041",
+    "cuda11.4-cudnn8.0.5-ubuntu18.04-manylinux2010-multipython": "sha256:0777b477c37b003895713bd11e4e4db99329b7f03b77b130d49437881d71b795",
+    "cuda11.4-cudnn8.2-ubuntu18.04-manylinux2010-multipython": "sha256:589c2fa98484dd83bcf0ffe371640a7c1a0c5e7299c0fc871c8820ddcbca2699",
+    "cuda11.2-cudnn8.1-ubuntu18.04-manylinux2014-multipython": "sha256:96ca0037fa5ad35468d6c9f64601298144dee4415d521cce59d8c36d8e6b4d24",
     # Others
     "rocm-ubuntu18.04-manylinux2010-multipython": "sha256:0cc50129979d8e96f8e218e3d73506b044c88898ade095f1ed5adbc24ca363af",
     "windows-1803": "sha256:f109576c7c0c8a1783ff22b666e8923b52dbbe7933f69a1c7a7275202c304a12",
